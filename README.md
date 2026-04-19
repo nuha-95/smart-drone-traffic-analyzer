@@ -29,6 +29,12 @@ The project uses:
 
 ## Setup Options
 
+Clone the repository:
+
+```bash
+git clone https://github.com/nuha-95/smart-drone-traffic-analyzer
+```
+
 Recommended order:
 
 1. For the most reproducible setup, use Docker
@@ -78,7 +84,7 @@ smart-drone-traffic-analyzer/
 ## Run with Docker
 
 ```bash
-docker compose up --build -d
+docker compose up --build 
 ```
 
 Services:
