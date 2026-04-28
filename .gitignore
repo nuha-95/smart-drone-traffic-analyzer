@@ -52,6 +52,5 @@ storage/*.db-wal
 
 # Model and binary artifacts
 *.pt
-!backend/services/yolov8n.pt
 !backend/services/bytetrack.yaml
 *.tmp.mp4

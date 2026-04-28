@@ -15,6 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend ./backend
 COPY storage ./storage
 
+RUN python -c "import urllib.request; urllib.request.urlretrieve('https://github.com/ultralytics/assets/releases/latest/download/yolov8n.pt', '/app/backend/services/yolov8n.pt')"
+
 RUN mkdir -p /app/storage/uploads /app/storage/outputs /app/storage/reports
 
 EXPOSE 8000
