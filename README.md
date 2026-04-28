@@ -50,7 +50,6 @@ Recommended order:
 
 Important runtime files:
 
-- `backend/services/yolov8n.pt`
 - `backend/services/bytetrack.yaml`
 
 ## Project Structure
@@ -64,7 +63,6 @@ smart-drone-traffic-analyzer/
 |   `-- services/
 |       |-- video_processor.py
 |       |-- bytetrack.yaml
-|       `-- yolov8n.pt
 |-- frontend/
 |   |-- src/
 |   `-- package.json
@@ -94,6 +92,7 @@ Services:
 - API docs: `http://localhost:8000/docs`
 
 Docker helps keep the runtime environment consistent across machines.
+The backend image downloads `yolov8n.pt` during build.
 
 ## Run Locally
 
@@ -195,7 +194,7 @@ Known edge-case handling:
 ## Engineering Assumptions
 
 - input files are `.mp4`
-- `backend/services/yolov8n.pt` is present at runtime
+- `backend/services/yolov8n.pt` is downloaded during Docker build and present at runtime
 - `backend/services/bytetrack.yaml` is present at runtime
 - SQLite is sufficient for the current single-instance workflow
 - preventing duplicate counts is more important than aggressively recovering every missed count
